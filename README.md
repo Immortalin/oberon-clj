@@ -1,4 +1,4 @@
-# oberon-clj
+# Nietzsche - An Oberon-7 Compiler
 
 FIXME: description
 

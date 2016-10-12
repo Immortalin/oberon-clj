@@ -1,7 +1,10 @@
 (*
 letter = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z".
+
+character = letter | digit letter
 *)
-letter = #"[a-zA-Z]+"
+character = #".*"
+letter = #"[a-zA-Z]"
 digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9".
 hexDigit = digit | "A" | "B" | "C" | "D" | "E" | "F".
 ident = letter {letter | digit}.
@@ -11,7 +14,7 @@ integer = digit {digit} | digit {hexDigit} "H".
 real = digit {digit} "." {digit} [ScaleFactor].
 ScaleFactor = "E" ["+" | "-"] digit {digit}.
 number = integer | real.
-string = """ {character} """ | digit {hexDigit} "X".
+string = "\"" {character} "\"" | digit {hexDigit} "X".
 ConstDeclaration = identdef "=" ConstExpression.
 ConstExpression = expression.
 TypeDeclaration = identdef "=" type.

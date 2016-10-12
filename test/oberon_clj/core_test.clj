@@ -2,6 +2,6 @@
   (:require [clojure.test :refer :all]
             [oberon-clj.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest parser-tester
+  (testing "Parsing Oberon code"
+    (is (test-oberon-syntax))))
