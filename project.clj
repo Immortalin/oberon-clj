@@ -6,8 +6,10 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [instaparse "1.4.3"]
                  [org.clojure/tools.macro "0.1.2"]
+                 [gui-diff "0.6.7"]
                  ;; [org.bytedeco.javacpp-presets/llvm "3.8.0-1.2"]
                  ]
   :main ^:skip-aot oberon-clj.core
   :target-path "target/%s"
+  :plugins [[nightlight/lein-nightlight "1.0.1"]]
   :profiles {:uberjar {:aot :all}})
