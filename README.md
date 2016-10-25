@@ -1,7 +1,10 @@
 # Nietzsche - An Oberon-7 Compiler
 
-FIXME: description
+Compiler for Oberon 7. EBNF derived from wirth's paper.
 
+## Progress so far
+- AST generation still incomplete due to ambiguity in grammar. Run `(diff-syntax-tree)` with your choice of 
+diff tool set in $DIFFTOOL environmental variable for more information.
 ## Installation
 
 Download from http://example.com/FIXME.
